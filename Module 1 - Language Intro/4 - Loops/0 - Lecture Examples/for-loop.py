@@ -18,5 +18,7 @@ contribution = 1000
 for i in range(0,years):
     balance = balance*(1+rate) + contribution
     print('At end of year ', i+1, ' balance is ', balance)
+    if balance > 5000: #this is used to prematurly break when a condition is met
+        break
 
 

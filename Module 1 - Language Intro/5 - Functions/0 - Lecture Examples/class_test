@@ -1,0 +1,20 @@
+import numpy as np
+A1 = np.array([[11,12,13] , [21,22,23] , [31,32,33]])
+
+print(A1) # See full array
+
+print() # create gap in terminal for organization
+
+print(A1[1,1]) # Just get middle value
+
+print()
+
+print(A1[:,2]) # get first row
+
+print()
+
+print(A1[0,:2]) # get first two values of middle row
+
+print()
+
+print(A1[1:,:2]) # get bottom left 4 values

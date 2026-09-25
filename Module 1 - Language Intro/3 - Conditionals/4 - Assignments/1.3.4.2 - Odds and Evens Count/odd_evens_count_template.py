@@ -29,3 +29,26 @@ num_evens = 0
 num_odds = 0
 
 ### YOUR CODE BEGINS HERE ###
+print(nums)
+
+def find_evenodd(list_name):
+    evens = 0
+    odds = 0
+
+    element = list_name[0]
+
+    for element in list_name:
+        if element % 2 == 0:
+
+            evens += 1
+
+        else:
+            odds += 1
+
+    return evens, odds
+    
+num_evens, num_odds = find_evenodd(nums)
+
+print(num_evens, num_odds)
+    
+

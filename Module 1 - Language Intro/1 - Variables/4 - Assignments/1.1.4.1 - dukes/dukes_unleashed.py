@@ -13,7 +13,19 @@ Note: this problem does not require the "compounding interest" formula from the 
 """
 
 ### Your code here ###
+I=30792     #Setting up varriables
+O=47882
 
-in_state_gift = 0
+P=1000000   #Converting known data into varriables
+r=0.05
+n=1
 
-out_state_gift = 0
+A = I / r   # Functions for each calculation
+B = O / r
+
+print(A)    # Checking Result
+print(B)    
+
+in_state_gift = 615840.0
+
+out_state_gift = 957640.0

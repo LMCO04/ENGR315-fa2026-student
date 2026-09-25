@@ -38,3 +38,10 @@ for n in new_list:
         print(n, " is even")
     else:
         print(n, " is odd")
+
+
+def compounding(n,r,P):
+    P(1+(r//100))**n
+
+total= compounding(10, 5, 50)
+print(total)

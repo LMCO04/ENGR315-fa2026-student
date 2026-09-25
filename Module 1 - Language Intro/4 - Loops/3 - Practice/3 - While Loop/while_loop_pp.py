@@ -24,9 +24,15 @@ while x != 0:
 c = 3
 y = 0
 while y < 5:
-    break
+    c = c * 2
+    y = y + 1
 
 # it's time to combine both of these concepts.
 # write a loop entirely from scratch that prints out a statement 6 times
 # the counter variable you will use is z
 z = 0
+d = 0
+while d < 6:
+    d = d + 1
+    z = z + 1
+    print("d = "+ str(d))
