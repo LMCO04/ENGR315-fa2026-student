@@ -33,7 +33,7 @@ def main(full_path_to_file):
     # Step 1: Establish a baseline by examining the force data the after for first ~20 points
 
     # set an amount of time to average and find the baseline
-    baseline_length = 0 ### your code here ###
+    baseline_length = 20 ### your code here ###
 
     # over the baseline, determine the average signal value
     baseline = 0 ### your code here ###
@@ -118,7 +118,7 @@ def main(full_path_to_file):
     g = constants.g
 
     # RSI = (g*tf^2) / (8*tc)
-    RSI = 0 ### your code here ###
+    # RSI = (g * time_of_flight ** 2) // (8 * time_of_contact) ### your code here ###
 
     ### Do not modify below this line ###
 
