@@ -26,6 +26,7 @@ def write_to_csv(filename: str, data):
     except FileNotFoundError:
         print('Could not open file ', filename, ' error!!')
         return
+    
 
     for a in data:
         file.writelines(str(a) + '\n')
@@ -47,6 +48,16 @@ def one_sided_tests(_files: list, _mean: float, _alpha: float, _less_than: bool)
     reject_null_hypothesis = []
 
     # YOUR CODE HERE #
+    alternative = 'less' if _less_than else 'greater' #Chooseing the testing side
+
+    for file in _files:
+
+        sample = np.loadtxt(file)   # loading one nuber per line in the array
+
+        result = ttest_1samp(sample, popmean = _mean, alternative=alternative) # one sample t-test put against the mean
+
+        if result.pvalue < _alpha: 
+            reject_null_hypothesis.append(file) #Function rejecting null hypothesis
 
     # return files that were rejected
     return reject_null_hypothesis

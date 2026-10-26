@@ -69,7 +69,7 @@ def calculate_stress(force, sample_diameter):
     # calculate stress (MPa) from load (kN) and cross-sectional area
     ### your code here ###
     # delete this line and replace it with your own
-    stress = force * area
+    stress = force * 1000 / area # Turning kN to N and using stress formula
     return stress
 
 
@@ -84,10 +84,10 @@ def calculate_max_strength_strain(strain, stress):
     """
 
     # calculate the maximum stress experienced
-    ultimate_tensile_stress = -1
+    ultimate_tensile_stress = np.max(stress)
 
     # calculate the maximum strain experienced
-    fracture_strain = -1
+    fracture_strain = np.max(strain)
 
     return ultimate_tensile_stress, fracture_strain
 
